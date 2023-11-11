@@ -3,15 +3,15 @@ import mongoose from "mongoose";
 const questionSchema = new mongoose.Schema({
     teacherID:{
         type: String,
-        require: true
+        required: true
     },
     questionID:{
         type: String,
-        require: true
+        required: true
     },
     title:{
         type: String,
-        require: true
+        required: true
     },
     questiontype:{
         type: String,

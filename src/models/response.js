@@ -3,15 +3,15 @@ import mongoose from "mongoose";
 const responseSchema = new mongoose.Schema({
     teacherID:{
         type: String,
-        require: true
+        required: true
     },
     questionID:{
         type: String,
-        require: true
+        required: true
     },
     studentID:{
         type: String,
-        require: true
+        required: true
     },
     response:{
         type: String,
