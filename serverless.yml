@@ -19,9 +19,21 @@ provider:
 
 
 functions:
-  hello:
-    handler: handler.hello
+  post-qusetions:
+    handler: src/post-questions.hello
     events:
       - httpApi:
-          method: get
-          path: /
+          method: POST
+          path: /question
+  get-qusetions:
+    handler: src/get-questions.hello
+    events:
+      - httpApi:
+          method: GET
+          path: /exam 
+  exam-submit:
+    handler: src/exam-submit.hello
+    events:
+      - httpApi:
+          method: POST
+          path: /exam-submit               
