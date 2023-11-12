@@ -32,6 +32,7 @@ module.exports.hello= async(event)=>{
           options:data.options
   
         })
+        
             const save =  await savedqus.save();
             return {
               statusCode: 200,
