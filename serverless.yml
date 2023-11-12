@@ -2,38 +2,32 @@ service: question
 
 frameworkVersion: "3"
 
+
 provider:
   name: aws
   runtime: nodejs18.x
   stage: dev
   region: us-east-1
-  iam:
-    role:
-      statements:
-        - Effect: "Allow"
-          Action:
-            - "s3:ListBucket"
-        - Effect: "Allow"
-          Action:
-            - "s3:PutObject"
+ 
 
 
 functions:
-  post-qusetions:
+  post-questions:
     handler: src/post-questions.hello
     events:
-      - httpApi:
+      - http:
           method: POST
           path: /question
-  get-qusetions:
+          authorizer: arn:aws:lambda:us-east-1:587592461836:function:auth-question-dev-auth
+  get-questions:
     handler: src/get-questions.hello
     events:
-      - httpApi:
+      - http:
           method: GET
           path: /exam 
   exam-submit:
     handler: src/exam-submit.hello
     events:
-      - httpApi:
+      - http:
           method: POST
           path: /exam-submit               

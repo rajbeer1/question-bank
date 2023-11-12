@@ -1,10 +1,9 @@
-const mongoose = require('mongoose');
-
+const mongoose = require ('mongoose')
 let conn = null;
 
 const uri = 'mongodb+srv://royu49:rajbeer11@cluster0.mczazx6.mongodb.net/?retryWrites=true&w=majority';
 
-export default async function() {
+async function conns(){
   if (conn == null) {
     conn = mongoose.connect(uri, {
       serverSelectionTimeoutMS: 5000
@@ -15,3 +14,4 @@ export default async function() {
 
   return conn;
 };
+module.exports=conns

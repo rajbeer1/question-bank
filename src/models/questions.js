@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-
+const mongoose = require ('mongoose')
 const questionSchema = new mongoose.Schema({
     teacherID:{
         type: String,
@@ -23,4 +22,5 @@ const questionSchema = new mongoose.Schema({
 
 })
 
-export default Question = mongoose.model("question",questionSchema)
+ Question = mongoose.model("question",questionSchema)
+ module.exports= Question
