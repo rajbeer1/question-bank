@@ -28,7 +28,8 @@ module.exports.hello= async(event)=>{
           teacherID,
           questionID:questionID,
           title: data.title,
-          responsetype: data.responsetype
+          responsetype: data.responsetype,
+          options:data.options
   
         })
             const save =  await savedqus.save();
@@ -42,7 +43,8 @@ module.exports.hello= async(event)=>{
       } catch (error) {
           console.log(error)
           return{
-            statusCode:500
+            statusCode:500,
+            body: 'internal server error'
           }
       }
   

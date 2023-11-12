@@ -12,7 +12,7 @@ const questionSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    questiontype:{
+    responsetype:{
         type: String,
         enum: ['MCQ','descriptive']
     },
