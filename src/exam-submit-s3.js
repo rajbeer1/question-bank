@@ -3,9 +3,9 @@ const AWS = require("aws-sdk");
 const s3 = new AWS.S3();
 const conns = require('./db/connecttodb')
 const Response = require('./models/response');
-const BUCKET_NAME = 'descriptive-ans-upload-raj';
+const BUCKET_NAME = 'descriptive-ans-upload-okieloki';
 
-module.exports.hello = async (event) => {
+module.exports.handler = async (event) => {
 
     const response = {
         isBase64Encoded: false,

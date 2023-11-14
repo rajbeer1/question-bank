@@ -4,7 +4,7 @@ const z = require('zod');
 const input = z.object({
   teacherID: z.string()
 })
-module.exports.hello = async (event) => {
+module.exports.handler = async (event) => {
   try {
     conns();
     const data= event.queryStringParameters.id;

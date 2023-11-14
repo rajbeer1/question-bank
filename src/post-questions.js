@@ -4,7 +4,7 @@ const {v4} = require ('uuid')
 const z = require('zod')
 
 
-module.exports.hello= async(event)=>{
+module.exports.handler= async(event)=>{
     try {
         const input = z.object({
             title:z.string(),

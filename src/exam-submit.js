@@ -7,7 +7,7 @@ const zodinput = z.object({
    questionID: z.string(),
    responsetype: z.string()
 })
-module.exports.hello = async (event) => {
+module.exports.handler = async (event) => {
 
   try {
     conns()
