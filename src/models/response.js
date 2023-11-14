@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require ('mongoose')
 
 const responseSchema = new mongoose.Schema({
     teacherID:{
@@ -17,6 +17,9 @@ const responseSchema = new mongoose.Schema({
         type: String,
         enum: ['a', 'b', 'c', 'd'],
     },
+    descriptiveresponse:{
+        type: String
+    },
     responsetype:{
         type: String,
         enum: ['MCQ','descriptive']
@@ -26,4 +29,5 @@ const responseSchema = new mongoose.Schema({
     }
 })
 
-export default Response = mongoose.model("response",responseSchema)
+ Response = mongoose.model("response",responseSchema)
+ module.exports= Response
